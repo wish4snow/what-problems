@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <vector>
 using namespace std;
 
 
@@ -11,8 +12,8 @@ string problemLister (string problems) {
 	return assignmentLetter;
 }
 
-string numbersInRange (string range) {
-	string text;
+vector<int> numbersInRange (string range) {
+	vector<int> array;
 	int intSplit = -1;
 
 	for (int i = 0; i < range.length() - 1; i++) {
@@ -23,22 +24,25 @@ string numbersInRange (string range) {
 	} // end of for loop
 
 	if (intSplit == -1) {
-		return range;
+		array.push_back(stoi(range));
+		return array;
 
 	} //end of if statement
 
 	for (int i = stoi(range.substr(0, intSplit)); i < stoi(range.substr(intSplit + 1, range.length() - intSplit)) + 1; i++) {
-		text = text + to_string(i) + ","; 
+		array.push_back(i);
 	} //end of for loop
 
-	return text.substr(0, text.length() - 1);
+	return array;
 }
 
 
 int main () {
-
-	cout << problemLister("q10") << endl;
-	cout << numbersInRange("4-10") << endl;
+	vector<int> poop = numbersInRange("1-28");
+	cout << problemLister("M10") << endl;
+	for (int i = 0; i < poop.size(); i++) {
+		cout << poop[i] << " ";
+	}
 
 
 	return 0;
