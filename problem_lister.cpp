@@ -38,7 +38,7 @@ vector<int> numbersInRange (string range) {
 
 
 int main () {
-	vector<int> poop = numbersInRange("1-28");
+	vector<int> poop = numbersInRange("1-16");
 	cout << problemLister("M10") << endl;
 	for (int i = 0; i < poop.size(); i++) {
 		cout << poop[i] << " ";
