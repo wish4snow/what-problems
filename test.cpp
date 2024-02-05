@@ -9,6 +9,6 @@ int main () {
 	problemLister("Q1-3,5-7");
 	problemLister("R1-1,3-3,5-8");
 	problemLister("R1-1,3,5-8");
-	problemLister("T 4 - 5 ,1- 3,7 - 10,8-   12");
+	problemLister("T 4 - 5 ,1- 3,7 - 10,8-    12");
 	return 0;
 }
